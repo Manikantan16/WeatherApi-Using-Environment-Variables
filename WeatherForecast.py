@@ -7,7 +7,6 @@ import os
 from dotenv import load_dotenv
 
 
-load_dotenv()
 
  
 root =Tk()
@@ -16,7 +15,9 @@ root.resizable(0,0) #to make the window size fixed
 #title of our window
 root.title("Weather App - AskPython.com")
 root.configure(background = "light blue")
- 
+
+
+
 
 def getWeather():
     #define the APIKeys in the environment variable or env file section
@@ -73,5 +74,6 @@ weather_now = Label(root, text = "The Weather is:", font = 'arial 12 bold',backg
 tfield = Text(root, width=46, height=10,font = 'arial 10 bold')
 tfield.pack()
 
- 
+load_dotenv()
+
 root.mainloop()
